@@ -1,0 +1,23 @@
+﻿apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dockersqlasp
+  labels:
+    app: dockersqlasp
+spec:
+  selector:
+    matchLabels:
+      app: dockersqlasp
+  template:
+    metadata:
+      labels:
+        app: dockersqlasp
+    spec:
+      containers:
+      - name: dockersqlasp
+        image: tomiv123/dockersqlasp:dev
+        # Just spin & wait forever
+        command: [ "/bin/bash", "-c", "--" ]
+        args: [ "while true; do sleep 30; done;" ]
+        ports:
+        - containerPort: 80
