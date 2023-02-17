@@ -5,10 +5,10 @@
 replicaCount: 1
 
 image:
-  repository: tomiv123/dockersqlasp:dev
+  repository: tomiv123/dockersqlasp:latest
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
-  tag: "dev"
+  tag: "latest"
 
 imagePullSecrets: []
 nameOverride: ""
